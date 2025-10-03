@@ -43,6 +43,21 @@
       <toc
         v-else-if="rightColumn === 'toc'"
       ></toc>
+      <scenes-panel
+        v-else-if="rightColumn === 'scenes'"
+      ></scenes-panel>
+      <characters-panel
+        v-else-if="rightColumn === 'characters'"
+      ></characters-panel>
+      <places-panel
+        v-else-if="rightColumn === 'places'"
+      ></places-panel>
+      <git-panel
+        v-else-if="rightColumn === 'git'"
+      ></git-panel>
+      <writing-stats-panel
+        v-else-if="rightColumn === 'stats'"
+      ></writing-stats-panel>
     </div>
     <div class="drag-bar" ref="dragBar" v-show="rightColumn"></div>
   </div>
@@ -53,6 +68,11 @@ import { sideBarIcons, sideBarBottomIcons } from './help'
 import Tree from './tree.vue'
 import SideBarSearch from './search.vue'
 import Toc from './toc.vue'
+import ScenesPanel from './scenes.vue'
+import CharactersPanel from './characters.vue'
+import PlacesPanel from './places.vue'
+import GitPanel from './git.vue'
+import WritingStatsPanel from './writingStats.vue'
 import { mapState } from 'vuex'
 
 export default {
@@ -67,7 +87,12 @@ export default {
   components: {
     Tree,
     SideBarSearch,
-    Toc
+    Toc,
+    ScenesPanel,
+    CharactersPanel,
+    PlacesPanel,
+    GitPanel,
+    WritingStatsPanel
   },
   computed: {
     ...mapState({

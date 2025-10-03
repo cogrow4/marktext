@@ -11,6 +11,11 @@ import autoUpdates from './autoUpdates'
 import notification from './notification'
 import tweet from './tweet'
 import commandCenter from './commandCenter'
+import git from './git'
+import characters from './characters'
+import places from './places'
+import writingStats from './writingStats'
+import scenes from './scenes'
 
 Vue.use(Vuex)
 
@@ -61,7 +66,12 @@ const store = new Vuex.Store({
     preferences,
     editor,
     layout,
-    commandCenter
+    commandCenter,
+    git,
+    characters,
+    places,
+    writingStats,
+    scenes
   }
 })
 

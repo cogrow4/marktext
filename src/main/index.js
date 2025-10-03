@@ -9,6 +9,13 @@ import App from './app'
 import Accessor from './app/accessor'
 import setupEnvironment from './app/env'
 import { getLogLevel } from './utils'
+// Import novel writing features
+import './git'
+import './novel/characterDatabase'
+import './novel/placeDatabase'
+import './novel/writingStats'
+import './novel/exportService'
+import './novel/sceneManager'
 
 const initializeLogger = appEnvironment => {
   log.transports.console.level = process.env.NODE_ENV === 'development' ? 'info' : 'error'

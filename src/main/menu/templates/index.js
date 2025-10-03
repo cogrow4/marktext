@@ -8,6 +8,7 @@ import window from './window'
 import paragraph from './paragraph'
 import format from './format'
 import theme from './theme'
+import novel from './novel'
 
 export dockMenu from './dock'
 
@@ -38,6 +39,7 @@ export default function (keybindings, preferences, recentlyUsedFiles) {
     edit(keybindings),
     paragraph(keybindings),
     format(keybindings),
+    novel(),
     window(keybindings),
     theme(preferences),
     view(keybindings),
