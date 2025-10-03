@@ -74,6 +74,12 @@ export const reloadImageCache = win => {
   }
 }
 
+export const toggleNovelMode = win => {
+  if (win && win.webContents) {
+    win.webContents.send('mt::toggle-novel-mode')
+  }
+}
+
 // --- Commands -------------------------------------------------------------
 
 export const loadViewCommands = commandManager => {
@@ -85,6 +91,7 @@ export const loadViewCommands = commandManager => {
   commandManager.add(COMMANDS.VIEW_TOGGLE_TABBAR, toggleTabBar)
   commandManager.add(COMMANDS.VIEW_TOGGLE_TOC, showTableOfContents)
   commandManager.add(COMMANDS.VIEW_TYPEWRITER_MODE, toggleTypewriterMode)
+  commandManager.add(COMMANDS.VIEW_NOVEL_MODE, toggleNovelMode)
 
   commandManager.add(COMMANDS.VIEW_DEV_RELOAD, debugReloadWindow)
   commandManager.add(COMMANDS.VIEW_TOGGLE_DEV_TOOLS, debugToggleDevTools)

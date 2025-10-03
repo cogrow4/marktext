@@ -1,5 +1,5 @@
-productName: "MarkText"
-appId: "com.github.marktext.marktext"
+productName: "NovelCraft"
+appId: "com.novelcraft.app"
 
 asar: true
 asarUnpack:
@@ -67,16 +67,19 @@ fileAssociations:
   role: "Editor"
   icon: "../resources/icons/md.icns"
 mac:
-  artifactName: "marktext-${arch}-mac.${ext}"
+  artifactName: "novelcraft-${arch}-mac.${ext}"
   icon: "resources/icons/icon.icns"
   darkModeSupport: true
+  category: "public.app-category.writing"
   target:
     - target: dmg
       arch: [x64, arm64]
     - target: zip
       arch: [x64, arm64]
+  entitlements: "resources/mac/entitlements.mac.plist"
+  entitlementsInherit: "resources/mac/entitlements.mac.plist"
 dmg:
-  artifactName: "marktext-${arch}.${ext}"
+  artifactName: "novelcraft-${arch}.${ext}"
   contents:
   - x: 410
     y: 240
