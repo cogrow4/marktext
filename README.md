@@ -1,15 +1,15 @@
-<p align="center"><img src="static/logo-small.png" alt="MarkText" width="100" height="100"></p>
+<p align="center"><img src="static/logo-small.png" alt="NovelCraft" width="100" height="100"></p>
 
-<h1 align="center">MarkText</h1>
+<h1 align="center">NovelCraft</h1>
 
 <div align="center">
-  <a href="https://twitter.com/intent/tweet?via=marktextme&url=https://github.com/marktext/marktext/&text=What%20do%20you%20want%20to%20say%20to%20app?&hashtags=happyMarkText">
-    <img src="https://img.shields.io/twitter/url/https/github.com/marktext/marktext.svg?style=for-the-badge" alt="twitter">
+  <a href="https://github.com/novelcraft/novelcraft">
+    <img src="https://img.shields.io/github/stars/novelcraft/novelcraft.svg?style=for-the-badge" alt="stars">
   </a>
 </div>
 <div align="center">
-  <strong>:high_brightness: Next generation markdown editor :crescent_moon:</strong><br>
-  A simple and elegant open-source markdown editor that focused on speed and usability.<br>
+  <strong>:book: Professional novel writing software :writing_hand:</strong><br>
+  A comprehensive writing environment with git integration, character management, and advanced writing tools.<br>
   <sub>Available for Linux, macOS and Windows.</sub>
 </div>
 
@@ -163,14 +163,36 @@ Names and company logos of all sponsors (from both Patreon and Open Collective) 
 
 ## Features
 
-- Realtime preview (WYSIWYG) and a clean and simple interface to get a distraction-free writing experience.
-- Support [CommonMark Spec](https://spec.commonmark.org/0.29/), [GitHub Flavored Markdown Spec](https://github.github.com/gfm/) and selective support [Pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown).
-- Markdown extensions such as math expressions (KaTeX), front matter and emojis.
-- Support paragraphs and inline style shortcuts to improve your writing efficiency.
-- Output **HTML** and **PDF** files.
-- Various themes: **Cadmium Light**, **Material Dark** etc.
-- Various editing modes: **Source Code mode**, **Typewriter mode**, **Focus mode**.
-- Paste images directly from clipboard.
+### Core Writing Features
+- **Distraction-free writing environment** with realtime preview and clean interface
+- **Advanced markdown support** with CommonMark, GitHub Flavored Markdown, and Pandoc extensions
+- **Multiple editing modes**: Source Code, Typewriter, and Focus modes
+- **Professional typography** with customizable fonts and spacing
+
+### Novel Writing Tools
+- **Character Management System** - Create, organize, and track character development
+- **Place & Location Manager** - Build detailed world-building databases
+- **Notes System** - Organize research, ideas, and plot notes with tagging
+- **Writing Statistics** - Track word count, reading time, and writing analytics
+- **Advanced Find & Replace** - Regex support, similar words, overused words detection
+- **Writing Goals & Progress Tracking** - Set and monitor daily, weekly, and total word goals
+
+### Version Control & Collaboration
+- **Git Integration** - Full version control with branches, commits, and history
+- **Auto-commit on Save** - Automatic versioning of your work
+- **Collaboration Features** - Share and collaborate on projects
+
+### Export & Publishing
+- **Multiple Export Formats** - PDF, EPUB, HTML, LaTeX, and plain text
+- **Professional Publishing** - Customizable layouts, fonts, and styling
+- **Batch Export** - Export multiple formats simultaneously
+
+### Advanced Features
+- **Spell Checker** - Writing-specific spell checking with custom dictionaries
+- **Research Management** - Organize references and research materials
+- **Timeline & Plot Management** - Visual story structure tools
+- **Writing Templates** - Pre-built story structures and templates
+- **Dark Mode & Themes** - Writing-focused themes and customization
 
 <h4 align="center">:crescent_moon:themes:high_brightness:</h4>
 

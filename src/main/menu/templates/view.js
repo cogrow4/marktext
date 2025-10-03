@@ -41,6 +41,17 @@ export default function (keybindings) {
     }, {
       type: 'separator'
     }, {
+      id: 'novelModeMenuItem',
+      label: 'Novel Writing Mode',
+      accelerator: keybindings.getAccelerator('view.novel-mode'),
+      type: 'checkbox',
+      checked: false,
+      click (item, focusedWindow) {
+        actions.toggleNovelMode(focusedWindow)
+      }
+    }, {
+      type: 'separator'
+    }, {
       label: 'Show Sidebar',
       id: 'sideBarMenuItem',
       accelerator: keybindings.getAccelerator('view.toggle-sidebar'),

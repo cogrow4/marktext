@@ -17,6 +17,12 @@ import { watchers } from '../utils/imagePathAutoComplement'
 import { WindowType } from '../windows/base'
 import EditorWindow from '../windows/editor'
 import SettingWindow from '../windows/setting'
+import GitService from '../services/gitService'
+import DatabaseService from '../services/databaseService'
+import WritingStatsService from '../services/writingStatsService'
+import FindReplaceService from '../services/findReplaceService'
+import ExportService from '../services/exportService'
+import ProjectService from '../services/projectService'
 
 class App {
   /**
@@ -31,6 +37,14 @@ class App {
     this._windowManager = this._accessor.windowManager
     // this.launchScreenshotWin = null // The window which call the screenshot.
     // this.shortcutCapture = null
+
+    // Initialize novel writing services
+    this._gitService = new GitService()
+    this._databaseService = new DatabaseService()
+    this._writingStatsService = new WritingStatsService()
+    this._findReplaceService = new FindReplaceService()
+    this._exportService = new ExportService()
+    this._projectService = new ProjectService()
 
     this._listenForIpcMain()
   }

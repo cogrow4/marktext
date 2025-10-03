@@ -2,7 +2,8 @@
   <div
     class="editor-container"
   >
-    <side-bar v-if="init"></side-bar>
+    <side-bar v-if="init && !isNovelMode"></side-bar>
+    <novel-sidebar v-if="init && isNovelMode"></novel-sidebar>
     <div class="editor-middle">
       <title-bar
         :project="projectTree"
@@ -14,8 +15,12 @@
         :is-saved="isSaved"
       ></title-bar>
       <div class="editor-placeholder" v-if="!init"></div>
+      <welcome
+        v-if="!hasCurrentFile && init && isNovelMode"
+        @project-opened="onProjectOpened"
+      ></welcome>
       <recent
-        v-if="!hasCurrentFile && init"
+        v-if="!hasCurrentFile && init && !isNovelMode"
       ></recent>
       <editor-with-tabs
         v-if="hasCurrentFile && init"
@@ -39,9 +44,11 @@
 <script>
 import { addStyles, addThemeStyle } from '@/util/theme'
 import Recent from '@/components/recent'
+import Welcome from '@/components/welcome'
 import EditorWithTabs from '@/components/editorWithTabs'
 import TitleBar from '@/components/titleBar'
 import SideBar from '@/components/sideBar'
+import NovelSidebar from '@/components/novelSidebar'
 import AboutDialog from '@/components/about'
 import CommandPalette from '@/components/commandPalette'
 import ExportSettingDialog from '@/components/exportSettings'
@@ -58,9 +65,11 @@ export default {
   name: 'marktext',
   components: {
     Recent,
+    Welcome,
     EditorWithTabs,
     TitleBar,
     SideBar,
+    NovelSidebar,
     AboutDialog,
     ExportSettingDialog,
     Rename,
@@ -78,7 +87,8 @@ export default {
       showTabBar: state => state.layout.showTabBar,
       sourceCode: state => state.preferences.sourceCode,
       theme: state => state.preferences.theme,
-      textDirection: state => state.preferences.textDirection
+      textDirection: state => state.preferences.textDirection,
+      isNovelMode: state => state.preferences.novelMode || false
     }),
     ...mapState({
       zoom: state => state.preferences.zoom
@@ -97,6 +107,12 @@ export default {
     ]),
     hasCurrentFile () {
       return this.markdown !== undefined
+    }
+  },
+  methods: {
+    onProjectOpened(projectPath) {
+      // Handle project opening
+      this.$store.dispatch('OPEN_PROJECT', projectPath)
     }
   },
   watch: {

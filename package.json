@@ -1,8 +1,8 @@
 {
-  "name": "marktext",
-  "version": "0.17.1",
-  "homepage": "https://github.com/marktext/marktext/",
-  "description": "Next generation markdown editor",
+  "name": "novelcraft",
+  "version": "1.0.0",
+  "homepage": "https://github.com/novelcraft/novelcraft/",
+  "description": "Professional novel writing software with git integration, character management, and advanced writing tools",
   "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -86,7 +86,21 @@
     "vue-electron": "^1.0.6",
     "vue-router": "^3.5.3",
     "vuex": "^3.6.2",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "sqlite3": "^5.1.6",
+    "nodegit": "^0.28.0-alpha.13",
+    "simple-git": "^3.15.0",
+    "fuse.js": "^6.6.2",
+    "natural": "^6.5.0",
+    "compromise": "^14.10.0",
+    "word-count": "^1.0.2",
+    "reading-time": "^1.5.0",
+    "uuid": "^9.0.0",
+    "moment": "^2.29.4",
+    "chart.js": "^4.2.1",
+    "epub-gen": "^0.1.0",
+    "html-pdf": "^3.0.1",
+    "puppeteer": "^19.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -188,20 +202,15 @@
     "url": "https://github.com/marktext/marktext/issues"
   },
   "author": {
-    "name": "Jocs",
-    "email": "ransixi@gmail.com",
-    "url": "https://github.com/Jocs"
+    "name": "NovelCraft Team",
+    "email": "team@novelcraft.app",
+    "url": "https://github.com/novelcraft"
   },
   "maintainer": [
     {
-      "name": "Jocs",
-      "email": "ransixi@gmail.com",
-      "url": "https://github.com/Jocs"
-    },
-    {
-      "name": "Felix Häusler",
-      "email": "hfelix@protonmail.ch",
-      "url": "https://github.com/fxha"
+      "name": "NovelCraft Team",
+      "email": "team@novelcraft.app",
+      "url": "https://github.com/novelcraft"
     }
   ]
 }
