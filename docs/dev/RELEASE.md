@@ -1,12 +1,12 @@
-# Steps to release MarkText
+# Steps to release NovelCraft
 
 - Create a release candidate
   - Create branch `release-v%version%`
   - Set environment variable `MARKTEXT_IS_STABLE` to `1` (default on AppVeyor and Travis CI)
-  - Ensure [changelog](https://github.com/marktext/marktext/blob/master/.github/CHANGELOG.md) is up-to-date
+  - Ensure [changelog](https://github.com/novelcraft/novelcraft/blob/master/.github/CHANGELOG.md) is up-to-date
   - Bump version in `package.json` and changelog
   - Update all `README.md` files
-  - Bump Flathub version ([marktext.appdata.xml](https://github.com/marktext/marktext/blob/master/resources/linux/marktext.appdata.xml))
+  - Bump Flathub version ([novelcraft.appdata.xml](https://github.com/novelcraft/novelcraft/blob/master/resources/linux/novelcraft.appdata.xml))
   - Create commit `release version %version%`
   - Ensure all tests pass
   - A new draft release should be available or create one
@@ -15,11 +15,11 @@
   - Add changelog
   - Add SHA256 checksums
 - Update website and documentation
-- Publish [Flathub package](https://github.com/flathub/com.github.marktext.marktext)
+- Publish [Flathub package](https://github.com/flathub/com.github.novelcraft.novelcraft)
   - Ensure native dependencies
   - Update `runtime` and `SDK` if needed
   - Bump version and update URLs
-  - Test the package (`scripts/build-bundle.sh && scripts/test-marktext.sh`)
+  - Test the package (`scripts/build-bundle.sh && scripts/test-novelcraft.sh`)
   - Create commit `Update to v%version%`
 
 ## Work after releasing

@@ -55,7 +55,7 @@
     "default": "modified"
   },
   "startUpAction": {
-    "description": "General--The action after MarkText startup, open the last edited content, open the specified folder or blank page",
+    "description": "General--The action after NovelCraft startup, open the last edited content, open the specified folder or blank page",
     "enum": [
       "folder",
       "lastState",
@@ -68,7 +68,7 @@
     "type": "string"
   },
   "language": {
-    "description": "General--The language MarkText use.",
+    "description": "General--The language NovelCraft use.",
     "type": "string",
     "default": "en"
   },
@@ -248,7 +248,7 @@
     "default": "."
   },
   "preferHeadingStyle": {
-    "description": "Markdown--The preferred heading style in MarkText",
+    "description": "Markdown--The preferred heading style in NovelCraft",
     "enum": [
       "atx",
       "setext"
@@ -311,7 +311,7 @@
     "default": "hand"
   },
   "theme": {
-    "description": "Theme--Select the theme used in MarkText",
+    "description": "Theme--Select the theme used in NovelCraft",
     "type": "string",
     "default": "light"
   },
