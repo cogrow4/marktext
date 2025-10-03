@@ -62,7 +62,7 @@ import { DEFAULT_STYLE } from '@/config'
 import { ipcRenderer } from 'electron'
 
 export default {
-  name: 'marktext',
+  name: 'novelcraft',
   components: {
     Recent,
     Welcome,
@@ -129,8 +129,8 @@ export default {
     const { commit, dispatch } = this.$store
 
     // Apply initial state (theme and titleBarStyle) and delay load other values.
-    if (global.marktext.initialState) {
-      commit('SET_USER_PREFERENCE', global.marktext.initialState)
+    if (global.novelcraft.initialState) {
+      commit('SET_USER_PREFERENCE', global.novelcraft.initialState)
     }
 
     // store/index.js
@@ -208,7 +208,7 @@ export default {
     }, false)
 
     this.$nextTick(() => {
-      const style = global.marktext.initialState || DEFAULT_STYLE
+      const style = global.novelcraft.initialState || DEFAULT_STYLE
       addStyles(style)
       this.hideLoadingPage()
     })

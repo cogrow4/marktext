@@ -199,10 +199,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:marktext/marktext.git"
+    "url": "git@github.com:novelcraft/novelcraft.git"
   },
   "bugs": {
-    "url": "https://github.com/marktext/marktext/issues"
+    "url": "https://github.com/novelcraft/novelcraft/issues"
   },
   "author": {
     "name": "NovelCraft Team",

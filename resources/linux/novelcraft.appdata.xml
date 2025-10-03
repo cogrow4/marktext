@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>com.github.marktext.marktext</id>
+  <id>com.novelcraft.app</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
-  <name>MarkText</name>
-  <summary>Next generation markdown editor</summary>
+  <name>NovelCraft</name>
+  <summary>Professional novel writing software</summary>
   <description>
     <p>
-      MarkText is a free and open-source realtime preview markdown editor which support both CommonMark Spec and GitHub Flavored Markdown Spec. It is a concise text editor, dedicated to improving your writing efficiency.
+      NovelCraft is a professional novel writing software with git integration, character management, and advanced writing tools. It provides everything a serious novelist needs in one integrated environment.
     </p>
     <p>Features:</p>
     <ul>
-      <li>Realtime preview (WYSIWYG) and a clean and simple interface to get a distraction-free writing experience</li>
-      <li>GitHub Flavored Markdown like task-lists, tables, links and emojis</li>
-      <li>Markdown extensions such as math expressions (KaTeX) and front matter</li>
-      <li>Code fence for all the popular languages</li>
-      <li>Support paragraphs and inline style shortcuts to improve your writing efficiency</li>
-      <li>Various edit modes and themes: source code mode, typewriter mode, focus mode</li>
+      <li>Character and place management for world-building</li>
+      <li>Git version control integration for your novels</li>
+      <li>Advanced writing statistics and analytics</li>
+      <li>Notes system with tagging and organization</li>
+      <li>Multiple export formats (PDF, EPUB, HTML, LaTeX)</li>
+      <li>Distraction-free writing environment with multiple themes</li>
     </ul>
   </description>
-  <url type="homepage">https://github.com/marktext/marktext/</url>
-  <url type="bugtracker">https://github.com/marktext/marktext/issues</url>
+  <url type="homepage">https://github.com/novelcraft/novelcraft/</url>
+  <url type="bugtracker">https://github.com/novelcraft/novelcraft/issues</url>
   <screenshots>
     <screenshot type="default">
       <caption>Light theme</caption>
-      <image>https://raw.githubusercontent.com/marktext/marktext/master/resources/linux/img/img1.png</image>
+      <image>https://raw.githubusercontent.com/novelcraft/novelcraft/master/resources/linux/img/img1.png</image>
     </screenshot>
     <screenshot>
       <caption>Sidebar</caption>
-      <image>https://raw.githubusercontent.com/marktext/marktext/master/resources/linux/img/img2.png</image>
+      <image>https://raw.githubusercontent.com/novelcraft/novelcraft/master/resources/linux/img/img2.png</image>
     </screenshot>
     <screenshot>
       <caption>Image and math equations</caption>
-      <image>https://raw.githubusercontent.com/marktext/marktext/master/resources/linux/img/img3.png</image>
+      <image>https://raw.githubusercontent.com/novelcraft/novelcraft/master/resources/linux/img/img3.png</image>
     </screenshot>
     <screenshot>
       <caption>Dark theme</caption>
-      <image>https://raw.githubusercontent.com/marktext/marktext/master/resources/linux/img/img4.png</image>
+      <image>https://raw.githubusercontent.com/novelcraft/novelcraft/master/resources/linux/img/img4.png</image>
     </screenshot>
     <screenshot>
       <caption>Sidebar and tabs</caption>
-      <image>https://raw.githubusercontent.com/marktext/marktext/master/resources/linux/img/img5.png</image>
+      <image>https://raw.githubusercontent.com/novelcraft/novelcraft/master/resources/linux/img/img5.png</image>
     </screenshot>
     <screenshot>
       <caption>Source code mode</caption>
-      <image>https://raw.githubusercontent.com/marktext/marktext/master/resources/linux/img/img6.png</image>
+      <image>https://raw.githubusercontent.com/novelcraft/novelcraft/master/resources/linux/img/img6.png</image>
     </screenshot>
   </screenshots>
   <categories>

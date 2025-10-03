@@ -6,7 +6,14 @@
   <a href="https://github.com/novelcraft/novelcraft">
     <img src="https://img.shields.io/github/stars/novelcraft/novelcraft.svg?style=for-the-badge" alt="stars">
   </a>
+  <a href="https://github.com/novelcraft/novelcraft/releases">
+    <img src="https://img.shields.io/github/downloads/novelcraft/novelcraft/total.svg?style=for-the-badge" alt="downloads">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/novelcraft/novelcraft.svg?style=for-the-badge" alt="LICENSE">
+  </a>
 </div>
+
 <div align="center">
   <strong>:book: Professional novel writing software :writing_hand:</strong><br>
   A comprehensive writing environment with git integration, character management, and advanced writing tools.<br>
@@ -16,91 +23,29 @@
 <br>
 
 <div align="center">
-  <!-- License -->
-  <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/marktext/marktext.svg" alt="LICENSE">
-  </a>
-  <!-- Build Status -->
-  <a href="https://travis-ci.org/marktext/marktext/">
-    <img src="https://travis-ci.org/marktext/marktext.svg?branch=master" alt="build">
-  </a>
-  <a href="https://ci.appveyor.com/project/marktext/marktext/branch/master">
-    <img src="https://ci.appveyor.com/api/projects/status/l4gxgydj0i95hmxg/branch/master?svg=true" alt="build">
-  </a>
-  <!-- Downloads total -->
-  <a href="https://github.com/marktext/marktext/releases">
-    <img src="https://img.shields.io/github/downloads/marktext/marktext/total.svg" alt="total download">
-  </a>
-  <!-- Downloads latest release -->
-  <a href="https://github.com/marktext/marktext/releases/latest">
-    <img src="https://img.shields.io/github/downloads/marktext/marktext/v0.17.1/total.svg" alt="latest download">
-  </a>
-  <!-- sponsors -->
-  <a href="https://opencollective.com/marktext">
-    <img src="https://opencollective.com/marktext/tiers/silver-sponsors/badge.svg?label=SilverSponsors&color=brightgreen" alt="sponsors">
-  </a>
-</div>
-
-<div align="center">
   <h3>
-    <a href="https://github.com/marktext/marktext">
-      Website
-    </a>
-    <span> | </span>
-    <a href="https://github.com/marktext/marktext#features">
+    <a href="https://github.com/novelcraft/novelcraft#features">
       Features
     </a>
     <span> | </span>
-    <a href="https://github.com/marktext/marktext#download-and-installation">
+    <a href="https://github.com/novelcraft/novelcraft#download-and-installation">
       Downloads
     </a>
     <span> | </span>
-    <a href="https://github.com/marktext/marktext#development">
+    <a href="https://github.com/novelcraft/novelcraft#development">
       Development
     </a>
     <span> | </span>
-    <a href="https://github.com/marktext/marktext#contribution">
+    <a href="https://github.com/novelcraft/novelcraft#contribution">
       Contribution
     </a>
   </h3>
 </div>
 
 <div align="center">
-  <sub>Translations:</sub>
-  <a href="docs/i18n/zh_cn.md#readme">
-    <span>:cn:</span>
-  </a>
-  <a href="docs/i18n/zh_tw.md#readme">
-    <span>:taiwan:</span>
-  </a>
-  <a href="docs/i18n/pl.md#readme">
-    <span>:poland:</span>
-  </a>
-  <a href="docs/i18n/ja.md#readme">
-    <span>:jp:</span>
-  </a>
-  <a href="docs/i18n/french.md#readme">
-    <span>:fr:</span>
-  </a>
-  <a href="docs/i18n/tr.md#readme">
-    <span>:tr:</span>
-  </a>
-  <a href="docs/i18n/spanish.md#readme">
-    <span>:es:</span>
-  </a>
-  <a href="docs/i18n/pt.md#readme">
-    <span>:portugal:</span>
-  </a>
-  <a href="docs/i18n/ko.md#readme">
-    <span>:kr:</span>
-  </a>
-</div>
-
-<div align="center">
-  <sub>This Markdown editor that could. Built with ❤︎ by
-    <a href="https://github.com/Jocs">Jocs</a> and
-    <a href="https://github.com/marktext/marktext/graphs/contributors">
-      contributors
+  <sub>Professional novel writing software for serious authors. Built with ❤︎ by the
+    <a href="https://github.com/novelcraft/novelcraft/graphs/contributors">
+      NovelCraft Team
     </a>
     .
   </sub>
@@ -108,184 +53,198 @@
 
 <br />
 
-<h2 align="center">Supporting MarkText</h2>
-
-MarkText is an MIT licensed open source project, and the latest version will always be downloadable for free from the GitHub release page. MarkText is still in development, and its development is inseparable from all sponsors. I hope you join them:
-
-- [Become a backer or sponsor on Patreon](https://www.patreon.com/ranluo) or [One time donation](https://github.com/Jocs/sponsor.me)
-- [Become a backer or sponsor on Open Collective](https://opencollective.com/marktext)
-
-##### What's the difference between Patreon and Open Collective?
-
-Patreon: Funds will be directly sponsored to Luo Ran (@jocs) who created MarkText and continues to maintain it.
-Open Collective: All expenses are transparent. The funds will be used for the development and maintenance of MarkText, funding online and offline activities, and acquiring other necessary resources.
-Names and company logos of all sponsors (from both Patreon and Open Collective) will appear on the official website for MarkText and in its README.md file.
-
-**Special Sponsors**
-
-<a href="https://www.dogedoge.com/">
- <img src="https://www.dogedoge.com/assets/new_logo.min.png" width="100" height="100">
-</a>
-
-**Platinum Sponsors**
-
-<a href="https://opencollective.com/marktext#platinum-sponsors">
- <img src="https://opencollective.com/marktext/tiers/platinum-sponsors.svg?avatarHeight=36&width=600">
-</a>
-
-**Gold Sponsors**
-
-<a href="https://opencollective.com/marktext#platinum-sponsors">
-  <img src="https://opencollective.com/marktext/tiers/gold-sponsors.svg?avatarHeight=36&width=600">
-</a>
-
-**Silver Sponsors**
-
-<a href="https://opencollective.com/marktext#platinum-sponsors">
-  <img src="https://opencollective.com/marktext/tiers/silver-sponsors.svg?avatarHeight=36&width=600">
-</a>
-
-**Bronze Sponsors**
-
-<a href="https://opencollective.com/marktext#platinum-sponsors">
-  <img src="https://opencollective.com/marktext/tiers/bronze-sponsors.svg?avatarHeight=36&width=600">
-</a>
-
-**Backers**
-
-<a href="https://opencollective.com/marktext#backers">
-  <img src="https://opencollective.com/marktext/tiers/backer.svg?avatarHeight=36&width=600">
-</a>
-
 ## Screenshot
 
-![](docs/marktext.png?raw=true)
+![](docs/novelcraft-screenshot.png?raw=true)
 
 ## Features
 
 ### Core Writing Features
 - **Distraction-free writing environment** with realtime preview and clean interface
-- **Advanced markdown support** with CommonMark, GitHub Flavored Markdown, and Pandoc extensions
-- **Multiple editing modes**: Source Code, Typewriter, and Focus modes
-- **Professional typography** with customizable fonts and spacing
+- **Live preview** with synchronized scrolling between editor and preview
+- **Typewriter mode** for focused writing
+- **Focus mode** to highlight current paragraph
+- **Source code mode** for advanced users
+- **Multiple themes** optimized for writing
+- **Spell checker** with writing-specific dictionaries
+- **Advanced find and replace** with regex support
 
 ### Novel Writing Tools
-- **Character Management System** - Create, organize, and track character development
-- **Place & Location Manager** - Build detailed world-building databases
-- **Notes System** - Organize research, ideas, and plot notes with tagging
-- **Writing Statistics** - Track word count, reading time, and writing analytics
-- **Advanced Find & Replace** - Regex support, similar words, overused words detection
-- **Writing Goals & Progress Tracking** - Set and monitor daily, weekly, and total word goals
+- **Character Management**: Create detailed character profiles with traits, relationships, and development arcs
+- **Place Management**: Organize locations, settings, and world-building elements
+- **Notes System**: Research organization with tagging and categorization
+- **Writing Statistics**: Real-time analytics including word count, reading time, and style analysis
+- **Progress Tracking**: Set goals and track writing milestones
+- **Timeline Management**: Organize chapters and plot points chronologically
 
 ### Version Control & Collaboration
-- **Git Integration** - Full version control with branches, commits, and history
-- **Auto-commit on Save** - Automatic versioning of your work
-- **Collaboration Features** - Share and collaborate on projects
+- **Git Integration**: Built-in version control for your novels
+- **Branch Management**: Create branches for different storylines or versions
+- **Commit History**: Track changes and revert to previous versions
+- **Auto-save**: Automatic saving with version control
+- **Collaboration**: Share projects with co-authors (coming soon)
 
 ### Export & Publishing
-- **Multiple Export Formats** - PDF, EPUB, HTML, LaTeX, and plain text
-- **Professional Publishing** - Customizable layouts, fonts, and styling
-- **Batch Export** - Export multiple formats simultaneously
+- **Multiple Formats**: Export to PDF, EPUB, HTML, LaTeX, and plain text
+- **Professional Layouts**: Publishing-ready formatting and typography
+- **Batch Export**: Export multiple chapters or entire novel at once
+- **Custom Templates**: Create and use custom export templates
+- **Print-ready PDFs**: High-quality PDFs suitable for printing
 
 ### Advanced Features
-- **Spell Checker** - Writing-specific spell checking with custom dictionaries
-- **Research Management** - Organize references and research materials
-- **Timeline & Plot Management** - Visual story structure tools
-- **Writing Templates** - Pre-built story structures and templates
-- **Dark Mode & Themes** - Writing-focused themes and customization
+- **Writing Analytics**: Detailed statistics on writing patterns and style
+- **Readability Analysis**: Flesch-Kincaid and other readability scores
+- **Word Frequency Analysis**: Identify overused words and phrases
+- **Research Integration**: Link external research and references
+- **Backup & Sync**: Automatic backup to cloud storage (coming soon)
+- **Plugin System**: Extensible architecture for custom features
 
-<h4 align="center">:crescent_moon:themes:high_brightness:</h4>
+## Why NovelCraft?
 
-| Cadmium Light                                     | Dark                                            |
-|:-------------------------------------------------:|:-----------------------------------------------:|
-| ![](docs/themeImages/cadmium-light.png?raw=true)  | ![](docs/themeImages/dark.png?raw=true)         |
-| Graphite Light                                    | Material Dark                                   |
-| ![](docs/themeImages/graphite-light.png?raw=true) | ![](docs/themeImages/materal-dark.png?raw=true) |
-| Ulysses Light                                     | One Dark                                        |
-| ![](docs/themeImages/ulysses-light.png?raw=true)  | ![](docs/themeImages/one-dark.png?raw=true)     |
+1. **Professional Writing Tools**: NovelCraft provides everything a serious novelist needs - character management, world-building, version control, and advanced writing analytics - all in one integrated environment.
 
-<h4 align="center">:smile_cat:Edit modes:dog:</h4>
+2. **Never Lose Your Work**: Built-in Git integration ensures your novel is always versioned and backed up. Every change is tracked, and you can always revert to previous versions.
 
-| Source Code          | Typewriter               | Focus               |
-|:--------------------:|:------------------------:|:-------------------:|
-| ![](docs/source.gif) | ![](docs/typewriter.gif) | ![](docs/focus.gif) |
+3. **Organize Your Story**: Keep characters, places, and research organized with powerful database-driven tools. Find information instantly with advanced search and filtering.
 
-## Why make another editor?
+4. **Write Better**: Advanced writing statistics help you understand your writing patterns, improve readability, and maintain consistency throughout your novel.
 
-1. I love writing. I have used a lot of markdown editors, yet there is still not an editor that can fully meet my needs. I don't like to be disturbed when I write by some unbearable bug. **MarkText** uses virtual DOM to render pages which has the added benefits of being highly efficient and being open source. That way anyone who loves markdown and writing can use MarkText.
-2. As mentioned above, **MarkText** is completely free and open source and will be open source forever. We hope that all markdown lovers will contribute their own code and help develop **MarkText** into a popular markdown editor.
-3. There are many markdown editors and all have their own merits, some have features which others don't. It's difficult to satisfy each markdown users' needs but we hope **MarkText** will be able to satisfy each markdown user as much as possible. Although the latest **MarkText** is still not perfect, we will try to make it as best as we possibly can.
+5. **Publish Professionally**: Export your novel in multiple formats (PDF, EPUB, HTML, LaTeX) with professional layouts and typography.
+
+6. **Open Source**: NovelCraft is completely free and open source, built by writers for writers. Contribute to make it even better.
 
 ## Download and Installation
 
 ![platform](https://img.shields.io/static/v1.svg?label=Platform&message=Linux-64%20|%20macOS-64%20|%20Win-32%20|%20Win-64&style=for-the-badge)
 
-| ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/mac-pass-sm.png)                                                                                                  | ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/windows-pass-sm.png)                                                                                                          | ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/linux-pass-sm.png)                                                                                                                        |
-|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [![latest version](https://img.shields.io/github/downloads/marktext/marktext/latest/marktext-x64.dmg.svg)](https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x64.dmg) | [![latest version](https://img.shields.io/github/downloads/marktext/marktext/latest/marktext-setup.exe.svg)](https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-setup.exe) | [![latest version](https://img.shields.io/github/downloads/marktext/marktext/latest/marktext-x86_64.AppImage.svg)](https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x86_64.AppImage) |
-
-Want to see new features of the latest version? Please refer to [CHANGELOG](.github/CHANGELOG.md).
+### Quick Start
 
 #### macOS
-
-You can either download the latest `marktext-%version%.dmg` from the [release page](https://github.com/marktext/marktext/releases/latest) or install MarkText using [**homebrew cask**](https://github.com/caskroom/homebrew-cask). To use Homebrew-Cask you just need to have [Homebrew](https://brew.sh/) installed.
-
 ```bash
-brew install --cask mark-text
+# Download and run the setup script
+curl -fsSL https://raw.githubusercontent.com/novelcraft/novelcraft/main/setup-macos.sh | bash
+
+# Or install via Homebrew (coming soon)
+brew install --cask novelcraft
 ```
 
 #### Windows
-
-Simply download and install MarkText via setup wizard (`marktext-setup-%version%.exe`) and choose whether to install per-user or machine wide. Alternatively, install MarkText using a package manager such as [Chocolatey](https://chocolatey.org/) or [Winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/).
-
-To use Chocolatey, you need to have [Chocolatey](https://chocolatey.org/install) installed:
-
 ```bash
-choco install marktext
-```
-
-To use Winget, you need to have [Winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/#install-winget) installed:
-
-```bash
-winget install marktext
+# Download the installer from releases
+# Or install via Chocolatey (coming soon)
+choco install novelcraft
 ```
 
 #### Linux
+```bash
+# Download and run the setup script
+curl -fsSL https://raw.githubusercontent.com/novelcraft/novelcraft/main/setup-linux.sh | bash
+```
 
-Please follow the [Linux installation instructions](docs/LINUX.md).
+### Manual Installation
 
-#### Other
+1. **Download**: Get the latest release from [GitHub Releases](https://github.com/novelcraft/novelcraft/releases)
+2. **Install**: Run the installer for your platform
+3. **Launch**: Start NovelCraft and begin writing!
 
-All binaries for Linux, macOS and Windows can be downloaded from the [release page](https://github.com/marktext/marktext/releases/latest). If a version is unavailable for your system, then please open an [issue](https://github.com/marktext/marktext/issues).
+### System Requirements
+
+- **macOS**: 10.15 (Catalina) or later
+- **Windows**: Windows 10 or later
+- **Linux**: Ubuntu 18.04+ or equivalent
+- **RAM**: 4GB minimum, 8GB recommended
+- **Storage**: 2GB free space
 
 ## Development
 
-If you wish to build MarkText yourself, please check out our [build instructions](docs/dev/BUILD.md).
+If you wish to build NovelCraft yourself, please check out our [build instructions](docs/dev/BUILD.md).
 
 - [User documentation](docs/README.md)
 - [Developer documentation](docs/dev/README.md)
+- [Changelog](.github/CHANGELOG.md)
 
-If you have any questions regarding MarkText, you are welcome to write an issue. When doing so please use the default format found when opening an issue. Of course, if you submit a PR directly, it will be greatly appreciated.
+### Prerequisites
 
-## Integrations
+- Node.js >= 18.0.0
+- npm >= 8.0.0
+- Git
 
-- [Alfred Workflow](http://www.packal.org/workflow/mark-text): A Workflow for the macOS app Alfred: Use "mt" to open files/folder with MarkText.
+### Build Instructions
+
+```bash
+# Clone the repository
+git clone https://github.com/novelcraft/novelcraft.git
+cd novelcraft
+
+# Install dependencies
+npm install
+
+# Build for development
+npm run build:dev
+
+# Run in development mode
+npm run dev
+
+# Build for production
+npm run build
+
+# Create platform-specific packages
+npm run release:mac    # macOS
+npm run release:win    # Windows
+npm run release:linux  # Linux
+```
+
+### Project Structure
+
+```
+novelcraft/
+├── src/
+│   ├── main/           # Electron main process
+│   ├── renderer/       # Vue.js frontend
+│   └── common/         # Shared utilities
+├── docs/               # Documentation
+├── resources/          # App resources and icons
+└── static/             # Static assets
+```
 
 ## Contribution
 
-MarkText is in development, please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request. Want to add some features to MarkText? Refer to our [roadmap](https://github.com/marktext/marktext/projects?type=classic) and open issues.
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
+### How to Contribute
 
-## Contributors
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Thank you to all the people who have already contributed to MarkText[[contributors](https://github.com/marktext/marktext/graphs/contributors)].
+### Development Guidelines
 
-Special thanks to @[Yasujizr](https://github.com/Yasujizr) who designed the MarkText logo.
-
-<a href="https://github.com/marktext/marktext/graphs/contributors"><img src="https://opencollective.com/marktext/contributors.svg?width=890" /></a>
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass before submitting
 
 ## License
 
-[**MIT**](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmarktext%2Fmarktext.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmarktext%2Fmarktext?ref=badge_large)
+## Acknowledgments
+
+- Built on the foundation of [MarkText](https://github.com/novelcraft/novelcraft)
+- Uses [Electron](https://electronjs.org/) for cross-platform desktop support
+- Powered by [Vue.js](https://vuejs.org/) for the user interface
+- Git integration via [simple-git](https://github.com/steveukx/git-js)
+- Database powered by [SQLite](https://sqlite.org/)
+
+## Support
+
+- 📖 [Documentation](docs/README.md)
+- 🐛 [Report Issues](https://github.com/novelcraft/novelcraft/issues)
+- 💬 [Discussions](https://github.com/novelcraft/novelcraft/discussions)
+- 📧 [Contact](mailto:team@novelcraft.app)
+
+---
+
+**NovelCraft** - Professional novel writing software for serious authors. Built with ❤️ for writers, by writers.

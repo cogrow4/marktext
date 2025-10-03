@@ -7,7 +7,7 @@ const pandocCommand = 'pandoc'
 
 const getCommand = () => {
   if (envPathExists()) {
-    return process.env.MARKTEXT_PANDOC
+    return process.env.NOVELCRAFT_PANDOC
   }
   return pandocCommand
 }
@@ -45,7 +45,7 @@ pandoc.exists = () => {
 }
 
 const envPathExists = () => {
-  return !!process.env.MARKTEXT_PANDOC && isFile2(process.env.MARKTEXT_PANDOC)
+  return !!process.env.NOVELCRAFT_PANDOC && isFile2(process.env.NOVELCRAFT_PANDOC)
 }
 
 export default pandoc

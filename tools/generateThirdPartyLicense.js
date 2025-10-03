@@ -27,7 +27,7 @@ thirdPartyChecker.getLicenses(rootDir, (err, packages, checker) => {
   const addedKeys = {}
   Object.keys(packages).forEach(key => {
     if (/^babel-helper-vue-jsx-merge-props/.test(key) ||
-      /^marktext/.test(key)) {
+      /^novelcraft/.test(key)) {
       // babel-helper-vue-jsx-merge-props: MIT licensed used by element-ui
       return
     }
@@ -58,7 +58,7 @@ ${licenseText}
   const output = `# Third Party Notices
 -------------------------------------------------
 
-This file contains all third-party packages that are bundled and shipped with MarkText.
+This file contains all third-party packages that are bundled and shipped with NovelCraft.
 
 -------------------------------------------------
 # Summary

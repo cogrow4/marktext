@@ -160,7 +160,7 @@ const actions = {
   },
 
   DISPATCH_EDITOR_VIEW_STATE (_, viewState) {
-    const { windowId } = global.marktext.env
+    const { windowId } = global.novelcraft.env
     ipcRenderer.send('mt::view-layout-changed', windowId, viewState)
   }
 }

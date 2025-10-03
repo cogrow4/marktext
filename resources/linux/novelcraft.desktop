@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=NovelCraft
+Comment=Professional novel writing software with git integration, character management, and advanced writing tools.
+Exec=novelcraft %F
+Terminal=false
+Type=Application
+Icon=novelcraft
+Categories=Office;TextEditor;Utility;
+MimeType=text/markdown;
+Keywords=novelcraft;novel;writing;
+StartupWMClass=novelcraft
+Actions=NewWindow;
+
+[Desktop Action NewWindow]
+Name=New Window
+Exec=novelcraft --new-window %F
+Icon=novelcraft

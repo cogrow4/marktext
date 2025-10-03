@@ -17,9 +17,9 @@ Vue.use(Vuex)
 // global states
 const state = {
   platform: process.platform, // platform of system `darwin` | `win32` | `linux`
-  appVersion: process.versions.MARKTEXT_VERSION_STRING, // MarkText version string
+  appVersion: process.versions.NOVELCRAFT_VERSION_STRING, // NovelCraft version string
   windowActive: true, // whether current window is active or focused
-  init: false // whether MarkText is initialized
+  init: false // whether NovelCraft is initialized
 }
 
 const getters = {}
