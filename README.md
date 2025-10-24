@@ -28,29 +28,47 @@ NovelWriter is a comprehensive writing environment tailored specifically for nov
 - **Focus Mode & Typewriter Mode**: Minimize distractions and keep your focus where it matters
 - **Spell Checking**: Built-in spell checker with multiple language support
 - **Advanced Find & Replace**: Search across your entire project with regex support
+- **Enhanced Export**: Export to professional formats including PDF, DOCX, EPUB, and HTML
 
 ### Novel Writing Tools
 
 #### Character Management
-- Create detailed character profiles with:
-  - Physical descriptions
-  - Personality traits
+- **Enhanced Character Profiles**: Create detailed character profiles with:
+  - Physical descriptions and appearance
+  - Personality traits and quirks
   - Background and history
   - Goals and motivations
   - Relationships with other characters
-- Organize characters by role (Protagonist, Antagonist, Supporting, etc.)
-- Tag and search characters
-- Quick access from sidebar
+  - Custom tags and notes
+- **Smart Organization**: Organize characters by role (Protagonist, Antagonist, Supporting, etc.)
+- **Advanced Search**: Tag and search characters with instant filtering
+- **Multiple Views**: Switch between grouped and list views for better organization
+- **Visual Design**: Modern card-based interface with avatars and color coding
+- **Quick Access**: Instant access from sidebar with one-click editing
 
 #### Place & Location Database
-- Comprehensive location management:
+- **Comprehensive Location Management**:
   - Geography and landscape descriptions
-  - Climate and weather
+  - Climate and weather patterns
   - Culture and customs
   - Historical background
+  - Inhabitants and demographics
   - Significance to your story
-- Organize by type (City, Town, Building, Natural, etc.)
-- Tag and search locations
+- **Smart Categorization**: Organize by type (City, Town, Building, Natural, Region, etc.)
+- **Visual Organization**: Modern interface with icons and color-coded types
+- **Advanced Search**: Tag and search locations with instant filtering
+- **Multiple Views**: Switch between grouped and list views for better organization
+
+#### Scene & Timeline Management
+- **Comprehensive Scene Organization**: Detailed scene cards with rich metadata
+- **Multiple View Modes**: 
+  - **List View**: Traditional list with drag-and-drop reordering
+  - **Timeline View**: Visual timeline showing scene progression
+  - **Status View**: Organize by completion status
+  - **Kanban View**: Drag-and-drop board for workflow management
+- **Rich Scene Data**: Track POV, setting, time of day, mood, goals, conflict, and outcomes
+- **Smart Filtering**: Filter by status, chapter, or custom criteria
+- **Visual Indicators**: Color-coded status and progress indicators
 
 #### Git Version Control Integration
 - **Full Git Integration**: Track every change to your manuscript
@@ -61,20 +79,26 @@ NovelWriter is a comprehensive writing environment tailored specifically for nov
 - Never lose your work again with automatic version history
 
 #### Writing Statistics & Goals
-- **Session Tracking**: Monitor your writing sessions
-- **Daily/Weekly/Monthly Goals**: Set and track word count goals
-- **Writing Analytics**: 
-  - Total words written
-  - Average words per day
-  - Writing streaks
-  - Session duration tracking
-- **Visual Progress**: Charts and graphs to visualize your progress
-- **Motivational Dashboard**: Stay motivated with clear goal tracking
+- **Enhanced Session Tracking**: Monitor your writing sessions with detailed analytics
+- **Smart Goal Management**: Set and track daily, weekly, and monthly word count goals
+- **Advanced Writing Analytics**: 
+  - Total words written across all projects
+  - Average words per day and session
+  - Writing streaks and consistency tracking
+  - Session duration and productivity metrics
+  - Goal progress with visual indicators
+- **Beautiful Visualizations**: Modern charts, progress bars, and graphs
+- **Motivational Dashboard**: Stay motivated with clear goal tracking and achievements
+- **Writing Goals Dialog**: Easy-to-use interface for setting and adjusting goals
 
-### Export Options
-- Export to **HTML** and **PDF**
-- Support for **CommonMark**, **GitHub Flavored Markdown**, and **Pandoc markdown**
-- Future support for **EPUB**, **MOBI**, and **DOCX** formats
+### Enhanced Export Options
+- **Professional Export Formats**: Export to PDF, DOCX, EPUB, and HTML
+- **Pandoc Integration**: High-quality document conversion with metadata support
+- **Customizable Export**: Adjust fonts, margins, and formatting for each format
+- **Batch Export**: Export multiple files with automatic page breaks
+- **Metadata Support**: Include title, author, and other metadata in exports
+- **Table of Contents**: Automatic TOC generation for EPUB and PDF formats
+- **Export Menu**: Easy access to all export options from the main menu
 
 ### Advanced Features
 - **File Organization**: Organize your manuscript into chapters and scenes

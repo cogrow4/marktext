@@ -580,6 +580,98 @@ class App {
     ipcMain.handle('mt::fs-trash-item', async (event, fullPath) => {
       return shell.trashItem(fullPath)
     })
+
+    // Novel writing export handlers
+    ipcMain.on('mt::export-novel', async (event, format) => {
+      const editor = this._windowManager.get(event.sender.id)
+      if (editor && editor.currentFile) {
+        try {
+          const content = editor.currentFile.markdown || ''
+          const title = editor.currentFile.name.replace(/\.[^/.]+$/, '') || 'Untitled Novel'
+          
+          const result = await dialog.showSaveDialog({
+            title: `Export Novel as ${format.toUpperCase()}`,
+            defaultPath: `${title}.${format}`,
+            filters: [
+              { name: `${format.toUpperCase()} Document`, extensions: [format] }
+            ]
+          })
+
+          if (!result.canceled) {
+            const exportData = {
+              content,
+              outputPath: result.filePath,
+              metadata: {
+                title,
+                author: 'Author',
+                fontSize: 12,
+                margin: 1
+              }
+            }
+
+            // Use the existing export service handlers
+            const { exec } = require('child_process')
+            const { promisify } = require('util')
+            const execAsync = promisify(exec)
+            const fs = require('fs-extra')
+            const os = require('os')
+            
+            let exportResult
+            const tempMd = path.join(os.tmpdir(), 'temp_export.md')
+            await fs.writeFile(tempMd, content)
+            
+            try {
+              let pandocCmd
+              switch (format) {
+                case 'pdf':
+                  pandocCmd = `pandoc "${tempMd}" -o "${result.filePath}" --pdf-engine=xelatex --metadata title="${title}"`
+                  break
+                case 'docx':
+                  pandocCmd = `pandoc "${tempMd}" -o "${result.filePath}" --metadata title="${title}"`
+                  break
+                case 'epub':
+                  pandocCmd = `pandoc "${tempMd}" -o "${result.filePath}" --toc --metadata title="${title}"`
+                  break
+                default:
+                  throw new Error(`Unsupported format: ${format}`)
+              }
+              
+              await execAsync(pandocCmd)
+              exportResult = { success: true, path: result.filePath }
+            } catch (error) {
+              exportResult = { success: false, error: error.message }
+            } finally {
+              await fs.remove(tempMd)
+            }
+
+            if (exportResult.success) {
+              event.sender.send('mt::export-success', { path: result.filePath, format })
+            } else {
+              event.sender.send('mt::export-error', exportResult.error)
+            }
+          }
+        } catch (error) {
+          log.error('Export error:', error)
+          event.sender.send('mt::export-error', error.message)
+        }
+      }
+    })
+
+    ipcMain.on('mt::show-sidebar-panel', (event, panel) => {
+      event.sender.send('mt::show-sidebar-panel', panel)
+    })
+
+    ipcMain.on('mt::show-writing-goals-dialog', (event) => {
+      event.sender.send('mt::show-writing-goals-dialog')
+    })
+
+    ipcMain.on('mt::git-init', (event) => {
+      event.sender.send('mt::git-init')
+    })
+
+    ipcMain.on('mt::git-commit-dialog', (event) => {
+      event.sender.send('mt::git-commit-dialog')
+    })
   }
 }
 

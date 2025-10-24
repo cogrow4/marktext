@@ -1,7 +1,12 @@
 <template>
   <div class="characters-panel">
     <div class="panel-header">
-      <h3>Characters</h3>
+      <div class="header-content">
+        <h3><i class="el-icon-user"></i> Characters</h3>
+        <div class="header-stats">
+          <span class="stat-badge">{{ characters.length }} total</span>
+        </div>
+      </div>
       <el-button 
         type="primary" 
         size="small" 
@@ -21,8 +26,16 @@
       </el-input>
     </div>
 
+    <div class="view-controls">
+      <el-radio-group v-model="viewMode" size="mini">
+        <el-radio-button label="grouped">Grouped</el-radio-button>
+        <el-radio-button label="list">List</el-radio-button>
+      </el-radio-group>
+    </div>
+
     <div class="characters-list">
-      <el-collapse v-model="activeRoles" accordion>
+      <!-- Grouped View -->
+      <el-collapse v-if="viewMode === 'grouped'" v-model="activeRoles" accordion>
         <el-collapse-item 
           v-for="(chars, role) in charactersByRole" 
           :key="role"
@@ -32,7 +45,13 @@
             v-for="character in chars" 
             :key="character.id"
             class="character-item"
+            :class="{ 'selected': currentCharacter && currentCharacter.id === character.id }"
             @click="selectCharacter(character)">
+            <div class="character-avatar">
+              <div class="avatar-circle">
+                {{ character.name.charAt(0).toUpperCase() }}
+              </div>
+            </div>
             <div class="character-info">
               <h4>{{ character.name }}</h4>
               <p class="character-description">{{ character.description || 'No description' }}</p>
@@ -40,7 +59,8 @@
                 <el-tag 
                   v-for="tag in character.tags" 
                   :key="tag" 
-                  size="mini">
+                  size="mini"
+                  type="info">
                   {{ tag }}
                 </el-tag>
               </div>
@@ -49,17 +69,65 @@
               <el-button 
                 type="text" 
                 icon="el-icon-edit"
+                size="mini"
                 @click.stop="editCharacter(character)">
               </el-button>
               <el-button 
                 type="text" 
                 icon="el-icon-delete"
+                size="mini"
                 @click.stop="deleteCharacter(character.id)">
               </el-button>
             </div>
           </div>
         </el-collapse-item>
       </el-collapse>
+
+      <!-- List View -->
+      <div v-else class="character-list-view">
+        <div 
+          v-for="character in filteredCharacters" 
+          :key="character.id"
+          class="character-item list-item"
+          :class="{ 'selected': currentCharacter && currentCharacter.id === character.id }"
+          @click="selectCharacter(character)">
+          <div class="character-avatar">
+            <div class="avatar-circle">
+              {{ character.name.charAt(0).toUpperCase() }}
+            </div>
+          </div>
+          <div class="character-info">
+            <div class="character-header">
+              <h4>{{ character.name }}</h4>
+              <el-tag size="mini" :type="getRoleType(character.role)">{{ character.role }}</el-tag>
+            </div>
+            <p class="character-description">{{ character.description || 'No description' }}</p>
+            <div class="character-tags">
+              <el-tag 
+                v-for="tag in character.tags" 
+                :key="tag" 
+                size="mini"
+                type="info">
+                {{ tag }}
+              </el-tag>
+            </div>
+          </div>
+          <div class="character-actions">
+            <el-button 
+              type="text" 
+              icon="el-icon-edit"
+              size="mini"
+              @click.stop="editCharacter(character)">
+            </el-button>
+            <el-button 
+              type="text" 
+              icon="el-icon-delete"
+              size="mini"
+              @click.stop="deleteCharacter(character.id)">
+            </el-button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Create/Edit Character Dialog -->
@@ -167,11 +235,12 @@ export default {
       searchQuery: '',
       activeRoles: [],
       inputVisible: false,
-      inputValue: ''
+      inputValue: '',
+      viewMode: 'grouped'
     }
   },
   computed: {
-    ...mapState('characters', ['characters', 'loading']),
+    ...mapState('characters', ['characters', 'loading', 'currentCharacter']),
     ...mapGetters('characters', ['charactersByRole', 'filteredCharacters'])
   },
   mounted () {
@@ -246,6 +315,15 @@ export default {
       }
       this.inputVisible = false
       this.inputValue = ''
+    },
+    getRoleType (role) {
+      const types = {
+        'Protagonist': 'success',
+        'Antagonist': 'danger',
+        'Supporting': 'warning',
+        'Minor': 'info'
+      }
+      return types[role] || 'info'
     }
   }
 }
@@ -256,21 +334,53 @@ export default {
   padding: 16px;
   height: 100%;
   overflow-y: auto;
+  background: #fafafa;
 }
 
 .panel-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8f4fd;
+}
+
+.header-content {
+  flex: 1;
 }
 
 .panel-header h3 {
-  margin: 0;
+  margin: 0 0 4px 0;
+  color: #2c3e50;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .search-box {
+  margin-bottom: 12px;
+}
+
+.view-controls {
   margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .characters-list {
@@ -279,27 +389,66 @@ export default {
 
 .character-item {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   padding: 12px;
   margin-bottom: 8px;
+  background: white;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .character-item:hover {
-  background-color: #f5f5f5;
+  background: #f8f9fa;
+  border-color: #409eff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.character-item.selected {
+  background: #e3f2fd;
+  border-color: #1976d2;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+}
+
+.character-avatar {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .character-info {
   flex: 1;
+  min-width: 0;
 }
 
 .character-info h4 {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   font-size: 16px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.character-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
 }
 
 .character-description {
@@ -311,6 +460,7 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-height: 1.4;
 }
 
 .character-tags {
@@ -322,5 +472,39 @@ export default {
 .character-actions {
   display: flex;
   gap: 4px;
+  align-items: flex-start;
+  margin-left: 8px;
+}
+
+.character-list-view .character-item {
+  margin-bottom: 6px;
+}
+
+.character-list-view .character-item.list-item {
+  padding: 10px;
+}
+
+/* Collapse customization */
+.characters-list .el-collapse {
+  border: none;
+}
+
+.characters-list .el-collapse-item__header {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.characters-list .el-collapse-item__content {
+  padding: 0;
+}
+
+.characters-list .el-collapse-item__wrap {
+  border: none;
+  background: transparent;
 }
 </style>

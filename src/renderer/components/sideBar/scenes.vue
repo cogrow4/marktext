@@ -16,7 +16,27 @@
         <el-radio-button label="list">List</el-radio-button>
         <el-radio-button label="timeline">Timeline</el-radio-button>
         <el-radio-button label="status">Status</el-radio-button>
+        <el-radio-button label="kanban">Kanban</el-radio-button>
       </el-radio-group>
+    </div>
+
+    <div class="scene-filters" v-if="viewMode === 'list' || viewMode === 'timeline'">
+      <el-select v-model="statusFilter" placeholder="Filter by status" size="mini" clearable>
+        <el-option label="All" value=""></el-option>
+        <el-option label="Draft" value="draft"></el-option>
+        <el-option label="In Progress" value="in_progress"></el-option>
+        <el-option label="Complete" value="complete"></el-option>
+        <el-option label="Revision" value="revision"></el-option>
+      </el-select>
+      <el-select v-model="chapterFilter" placeholder="Filter by chapter" size="mini" clearable>
+        <el-option label="All" value=""></el-option>
+        <el-option 
+          v-for="chapter in availableChapters" 
+          :key="chapter" 
+          :label="chapter" 
+          :value="chapter">
+        </el-option>
+      </el-select>
     </div>
 
     <!-- List View -->
@@ -106,6 +126,49 @@
           @click="selectScene(scene)">
           <h5>{{ scene.title }}</h5>
           <p>{{ scene.summary }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kanban View -->
+    <div v-else-if="viewMode === 'kanban'" class="kanban-view">
+      <div class="kanban-columns">
+        <div 
+          v-for="(scenes, status) in filteredScenesByStatus" 
+          :key="status"
+          class="kanban-column">
+          <div class="column-header">
+            <h4>{{ getStatusLabel(status) }}</h4>
+            <span class="count-badge">{{ scenes.length }}</span>
+          </div>
+          <div class="column-content">
+            <draggable 
+              v-model="scenes" 
+              group="scenes"
+              @end="handleKanbanReorder">
+              <div 
+                v-for="scene in scenes" 
+                :key="scene.id"
+                class="kanban-card"
+                @click="selectScene(scene)">
+                <div class="card-header">
+                  <h5>{{ scene.title }}</h5>
+                  <el-tag size="mini" :type="getStatusType(scene.status)">
+                    {{ scene.status }}
+                  </el-tag>
+                </div>
+                <p class="card-summary">{{ scene.summary || 'No summary' }}</p>
+                <div class="card-meta">
+                  <span v-if="scene.chapter" class="meta-item">
+                    <i class="el-icon-folder"></i> {{ scene.chapter }}
+                  </span>
+                  <span v-if="scene.wordCount" class="meta-item">
+                    <i class="el-icon-document"></i> {{ scene.wordCount }}
+                  </span>
+                </div>
+              </div>
+            </draggable>
+          </div>
         </div>
       </div>
     </div>
@@ -216,7 +279,9 @@ export default {
       viewMode: 'list',
       showCreateDialog: false,
       editingScene: null,
-      sceneForm: this.getEmptyForm()
+      sceneForm: this.getEmptyForm(),
+      statusFilter: '',
+      chapterFilter: ''
     }
   },
   computed: {
@@ -229,6 +294,41 @@ export default {
       set (value) {
         // Will be handled by reorder action
       }
+    },
+    filteredScenes () {
+      let filtered = this.scenes
+      
+      if (this.statusFilter) {
+        filtered = filtered.filter(scene => scene.status === this.statusFilter)
+      }
+      
+      if (this.chapterFilter) {
+        filtered = filtered.filter(scene => scene.chapter === this.chapterFilter)
+      }
+      
+      return filtered
+    },
+    filteredScenesByStatus () {
+      const filtered = this.filteredScenes
+      const statuses = {}
+      
+      filtered.forEach(scene => {
+        if (!statuses[scene.status]) {
+          statuses[scene.status] = []
+        }
+        statuses[scene.status].push(scene)
+      })
+      
+      return statuses
+    },
+    availableChapters () {
+      const chapters = new Set()
+      this.scenes.forEach(scene => {
+        if (scene.chapter) {
+          chapters.add(scene.chapter)
+        }
+      })
+      return Array.from(chapters).sort()
     }
   },
   mounted () {
@@ -315,6 +415,30 @@ export default {
         revision: 'danger'
       }
       return types[status] || 'info'
+    },
+    getStatusLabel (status) {
+      const labels = {
+        draft: 'Draft',
+        in_progress: 'In Progress',
+        complete: 'Complete',
+        revision: 'Revision'
+      }
+      return labels[status] || status
+    },
+    async handleKanbanReorder (evt) {
+      // Handle reordering within kanban columns
+      const newStatus = evt.to.className.includes('kanban-column') 
+        ? evt.to.querySelector('.column-header h4').textContent.toLowerCase().replace(' ', '_')
+        : evt.item._underlying_vm_.status
+      
+      const sceneId = evt.item._underlying_vm_.id
+      
+      if (newStatus !== evt.item._underlying_vm_.status) {
+        await this.updateScene({
+          id: sceneId,
+          updates: { status: newStatus }
+        })
+      }
     }
   }
 }
@@ -538,5 +662,123 @@ export default {
   margin: 0;
   font-size: 12px;
   color: #666;
+}
+
+.scene-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.kanban-view {
+  margin-top: 16px;
+}
+
+.kanban-columns {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 250px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #e9ecef;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.column-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+  text-transform: capitalize;
+}
+
+.count-badge {
+  background: #6c757d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.column-content {
+  padding: 8px;
+  min-height: 200px;
+}
+
+.kanban-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.kanban-card:hover {
+  border-color: #409eff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.card-header h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  flex: 1;
+  margin-right: 8px;
+}
+
+.card-summary {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  color: #999;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 </style>

@@ -1,267 +1,139 @@
 # NovelWriter Quick Start Guide
 
-Welcome to NovelWriter! This guide will help you get started with your novel writing journey.
+Welcome to NovelWriter! This guide will help you get started with your novel writing journey in just a few minutes.
 
-## Table of Contents
-1. [Installation](#installation)
-2. [First Steps](#first-steps)
-3. [Project Setup](#project-setup)
-4. [Core Features](#core-features)
-5. [Writing Workflow](#writing-workflow)
-6. [Tips & Best Practices](#tips--best-practices)
+## 🚀 Getting Started
 
-## Installation
+### 1. Open a Project
+- **New Project**: Create a new folder for your novel and open it in NovelWriter
+- **Existing Project**: Open an existing folder containing your manuscript files
+- **Single File**: Open any markdown file to start writing immediately
 
-### Prerequisites
-- **Pandoc** (optional, for DOCX/EPUB export): [Install Pandoc](https://pandoc.org/installing.html)
+### 2. Initialize Git (Recommended)
+- Click the **Git** icon in the sidebar
+- Click **"Initialize Repository"** to start version control
+- This will track all your changes and allow you to revert if needed
 
-### Install NovelWriter
-See the main [README.md](README.md) for installation instructions for your platform.
+### 3. Set Up Your Writing Goals
+- Click the **Stats** icon in the sidebar
+- Click **"Set Writing Goals"** to configure your daily, weekly, and monthly targets
+- Choose from presets like "Casual Writer" (500 words/day) or "NaNoWriMo" (1667 words/day)
 
-## First Steps
+## 📚 Organizing Your Novel
 
-### 1. Create or Open a Project
-- Click **File → Open Folder** to open an existing project
-- Or create a new folder for your novel and open it
-
-### 2. Initialize Git Version Control (Recommended)
-- Click the **Git icon** in the left sidebar
-- Click **Initialize Git** button
-- Your work is now protected with version control!
-
-### 3. Set Your Writing Goals
-- Click the **Stats icon** in the sidebar
-- Set your daily, weekly, and monthly word count goals
-- Track your progress in real-time
-
-## Project Setup
-
-### Organizing Your Manuscript
-
-#### File Structure
-Create a logical structure for your novel:
-```
-my-novel/
-├── chapters/
-│   ├── chapter-01.md
-│   ├── chapter-02.md
-│   └── ...
-├── notes/
-│   └── plot-notes.md
-└── research/
-    └── research-notes.md
-```
-
-### Character Database
-
-1. Click the **Characters icon** in the sidebar
-2. Click **Add Character**
-3. Fill in details:
-   - Name, Role (Protagonist/Antagonist/Supporting)
-   - Physical description
-   - Personality traits
-   - Background and history
-   - Goals and motivations
-   - Tags for quick searching
+### Character Management
+1. Click the **Characters** icon in the sidebar
+2. Click **"Add Character"** to create your first character
+3. Fill in details like:
+   - Name and role (Protagonist, Antagonist, etc.)
+   - Physical appearance and personality
+   - Background and motivations
+   - Relationships with other characters
+4. Use tags to categorize characters (e.g., "main", "villain", "family")
 
 ### Location Database
-
-1. Click the **Places icon** in the sidebar
-2. Click **Add Place**
-3. Document your settings:
-   - Name and type
+1. Click the **Places** icon in the sidebar
+2. Click **"Add Place"** to document your story's settings
+3. Include details like:
    - Geography and climate
-   - Culture and history
-   - Significance to your story
+   - Culture and customs
+   - Historical significance
+   - Inhabitants and atmosphere
 
-### Scene Planning
+### Scene Organization
+1. Click the **Scenes** icon in the sidebar
+2. Click **"Add Scene"** to plan your story structure
+3. Use different view modes:
+   - **List View**: Traditional scene list with drag-and-drop reordering
+   - **Timeline View**: Visual timeline of your story
+   - **Status View**: Organize by completion status
+   - **Kanban View**: Drag-and-drop workflow board
 
-1. Click the **Scenes icon** in the sidebar
-2. Create scene cards for each scene in your novel
-3. Track:
-   - Scene goals and conflicts
-   - Characters involved
-   - Setting and time
-   - Status (Draft/In Progress/Complete/Revision)
-4. Drag and drop to reorder scenes
+## ✍️ Writing Your Novel
 
-## Core Features
+### Start a Writing Session
+1. Click the **Stats** icon in the sidebar
+2. Click **"Start Session"** to begin tracking your writing
+3. Write in the main editor - your progress will be tracked automatically
+4. Click **"End Session"** when you're done
 
-### Writing Statistics Dashboard
+### Focus on Writing
+- Use **Focus Mode** (View → Focus Mode) to minimize distractions
+- Enable **Typewriter Mode** (View → Typewriter Mode) to keep your cursor centered
+- Choose a comfortable theme (View → Theme)
 
-Access via the **Stats icon** in the sidebar:
-- View today's word count
-- Track writing sessions
-- Monitor progress toward goals
-- See writing streaks and trends
+### Track Your Progress
+- Monitor your daily word count in the Stats panel
+- See your progress toward daily, weekly, and monthly goals
+- View writing streaks and productivity analytics
 
-**Starting a Session:**
-1. Click **Start Session** before you begin writing
-2. Write your content
-3. Click **End Session** when done
-4. Your statistics are automatically updated
-
-### Git Version Control
-
-The **Git panel** helps you track every change:
-
-**Basic Workflow:**
-1. Write and save your changes
-2. Open the Git panel
-3. Stage modified files by clicking **Stage**
-4. Enter a commit message (e.g., "Completed Chapter 3")
-5. Click **Commit**
-
-**Advanced Features:**
-- Create branches for different plot versions
-- View commit history
-- Push/pull to remote repositories (GitHub, GitLab, etc.)
-
-### Find and Replace
-
-Use the built-in search (Ctrl/Cmd + F) to:
-- Find text across your entire project
-- Use regex patterns for advanced searching
-- Replace text with multi-file support
-
-## Writing Workflow
-
-### Recommended Daily Workflow
-
-1. **Start Your Session**
-   - Open NovelWriter
-   - Click **Start Session** in the Stats panel
-   - Review your daily goal
-
-2. **Review Your Plan**
-   - Check your scene cards
-   - Review character notes if needed
-   - Refresh your memory on recent events
-
-3. **Write**
-   - Focus on your current scene/chapter
-   - Use Focus Mode (View → Focus Mode) to minimize distractions
-   - Use Typewriter Mode for centered writing
-
-4. **Save and Version**
-   - Save regularly (Ctrl/Cmd + S)
-   - Commit significant changes to Git
-   - Use descriptive commit messages
-
-5. **End Your Session**
-   - Click **End Session** in the Stats panel
-   - Review your progress
-   - Plan tomorrow's writing
-
-### Weekly Workflow
-
-1. **Review Progress**
-   - Check weekly statistics
-   - Review completed scenes
-   - Update character/place information
-
-2. **Plan Ahead**
-   - Create scene cards for upcoming chapters
-   - Outline plot points
-   - Research as needed
-
-3. **Backup**
-   - Push your work to a remote Git repository
-   - Export current draft (File → Export)
-
-## Tips & Best Practices
+## 📖 Advanced Features
 
 ### Version Control
+- **Commit Changes**: Save snapshots of your work with meaningful messages
+- **Branch Management**: Create different versions or plot lines
+- **History**: View and revert to any previous version
+- **Backup**: Push to GitHub, GitLab, or other Git remotes
 
-✅ **DO:**
-- Commit after completing each scene/chapter
-- Write meaningful commit messages
-- Create branches for experimental plot changes
-- Push to remote regularly (daily or weekly)
+### Export Your Novel
+- **PDF**: Professional formatting with custom fonts and margins
+- **DOCX**: Microsoft Word compatible format
+- **EPUB**: E-book format for digital publishing
+- **HTML**: Web-ready format for online sharing
 
-❌ **DON'T:**
-- Wait too long between commits
-- Use vague commit messages like "updates"
-- Forget to push to remote backup
+### Search and Organization
+- Use **Ctrl+F** (Cmd+F on Mac) to search within files
+- Use the **Search** panel to search across your entire project
+- Organize files in folders within the file tree
+- Use the **Table of Contents** panel for quick navigation
 
-### Organization
+## 🎯 Best Practices
 
-✅ **DO:**
-- Keep character and place databases updated
-- Use scene cards to track progress
-- Tag characters/places for easy searching
-- Break your manuscript into manageable files
+### Project Structure
+```
+My Novel/
+├── 01-Chapter-One.md
+├── 02-Chapter-Two.md
+├── characters/
+│   ├── protagonist.md
+│   └── antagonist.md
+├── research/
+│   ├── worldbuilding.md
+│   └── plot-notes.md
+└── scenes/
+    ├── opening-scene.md
+    └── climax-scene.md
+```
 
-❌ **DON'T:**
-- Put everything in one huge file
-- Forget to document important details
-- Let your databases get outdated
+### Writing Workflow
+1. **Plan**: Use the Scenes panel to outline your story
+2. **Research**: Document characters and locations
+3. **Write**: Focus on getting words on the page
+4. **Track**: Monitor your progress and stay motivated
+5. **Revise**: Use Git to track changes and experiment safely
+6. **Export**: Share your work in professional formats
 
-### Writing Habits
+### Tips for Success
+- **Set Realistic Goals**: Start with achievable daily word counts
+- **Write Regularly**: Even 15 minutes a day adds up
+- **Use the Tools**: Let NovelWriter handle organization so you can focus on writing
+- **Backup Often**: Commit your changes regularly
+- **Experiment Safely**: Use Git branches to try different approaches
 
-✅ **DO:**
-- Set realistic daily goals
-- Track your sessions consistently
-- Use distraction-free modes
-- Take breaks between writing sessions
+## 🆘 Need Help?
 
-❌ **DON'T:**
-- Set goals too high (leads to burnout)
-- Forget to start/end sessions (loses tracking data)
-- Write for hours without breaks
+- **Documentation**: Check the full documentation in the `docs/` folder
+- **Keyboard Shortcuts**: View all shortcuts in Help → Keyboard Shortcuts
+- **Themes**: Try different themes in View → Theme
+- **Settings**: Customize your experience in File → Preferences
 
-### Export and Backup
+## 🎉 You're Ready!
 
-✅ **DO:**
-- Export to multiple formats (DOCX, PDF, EPUB)
-- Keep remote Git backups
-- Export regularly as you progress
-- Test exports early in your project
+You now have everything you need to start writing your novel with NovelWriter. Remember:
 
-❌ **DON'T:**
-- Wait until the end to test exports
-- Rely on local storage only
-- Ignore export errors
+- **Start small**: Don't try to use every feature at once
+- **Write regularly**: Consistency is more important than perfection
+- **Use the tools**: Let NovelWriter help you stay organized
+- **Have fun**: Writing should be enjoyable!
 
-## Keyboard Shortcuts
-
-### Essential Shortcuts
-
-- **Ctrl/Cmd + N** - New file
-- **Ctrl/Cmd + O** - Open file
-- **Ctrl/Cmd + S** - Save
-- **Ctrl/Cmd + F** - Find
-- **Ctrl/Cmd + H** - Replace
-- **Ctrl/Cmd + Shift + F** - Find in folder
-- **Ctrl/Cmd + /** - Toggle sidebar
-- **Ctrl/Cmd + Shift + T** - Toggle table of contents
-
-### Writing Modes
-
-- **Ctrl/Cmd + Shift + 1** - Source code mode
-- **Ctrl/Cmd + Shift + 2** - Typewriter mode
-- **Ctrl/Cmd + Shift + 3** - Focus mode
-
-## Getting Help
-
-- Check the [main documentation](docs/README.md)
-- Review [developer docs](docs/dev/README.md) for advanced features
-- Report issues on GitHub
-- Join the community for support
-
-## Next Steps
-
-Now that you're familiar with the basics:
-
-1. Set up your project structure
-2. Create your main characters in the database
-3. Document your key locations
-4. Plan your first few scenes
-5. Set your writing goals
-6. Start writing!
-
-**Happy writing! 📚✨**
-
----
-
-Remember: The best novel is the one that gets written. Don't let perfectionism stop you from making progress. Use these tools to support your creativity, not constrain it.
+Happy writing! 📚✨
